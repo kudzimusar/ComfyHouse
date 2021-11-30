@@ -221,7 +221,7 @@ class Storage {
     localStorage.setItem('cart',JSON.stringify(cart));
   }
   static getCart() {
-    return localStorage.getItem('cart')?:JSON.parse
+    return localStorage.getItem('cart') ? JSON.parse
     (localStorage.getItem('cart')):[]
   }
 }
@@ -238,7 +238,7 @@ ui.setupAPP();
   products.getProducts().then((products) => {
     ui.displayProducts(products);
     Storage.saveProducts(products);
-  });
+  })
   .then(() => {
     ui.getBagButtons();
     ui.cartLogic();
